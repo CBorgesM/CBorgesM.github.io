@@ -1,0 +1,577 @@
+/* Styles pour les écrans de petite taille 
+@media screen and (max-width: 600px) 
+{
+}
+/* Styles pour les écrans de taille moyenne 
+@media screen and (min-width: 601px) and (max-width: 1024px) 
+{
+}
+/* Styles pour les écrans de grande taille 
+@media screen and (min-width: 1025px)
+{ 
+}
+/* Taille de police de l'élément racine -------------------------*/
+html 
+{
+    font-size: 16px;
+}
+/*---------------------------------------------------------*/
+/* Propriété général de la page -------------------------*/
+*{
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: century;
+    list-style-type: none;
+    text-decoration: none;
+}
+/*---------------------------------------------------------*/
+#reste
+{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+/*---------------------------------------------------------*/
+/* Image de fond d'écran ---------------------------------*/
+.FondDesPages
+{
+    background-image : linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("tFond4.png");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+}
+/*---------------------------------------------------------*/
+/* Toutes les sections -----------------------------------*/
+section /* position des sections */
+{
+    z-index: 0;
+    top: 0;
+}
+/*-------------------------------------------------------*/
+/* Logo  -----------------------------------------*/
+#Logo1 /* logo */
+{
+    position: fixed;
+    height: 13cqi;
+    top: 1cqi;
+    left: 1cqi;
+    z-index: 1;
+    filter: drop-shadow(1px 1px 0px rgb(255, 255, 255));
+}
+
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    #Logo1 /* logo */
+    {
+        position: fixed;
+        height: 23cqi;
+        top: 1cqi;
+        left: 1cqi;
+        z-index: 1;
+        filter: drop-shadow(1px 1px 0px rgb(255, 255, 255));
+    }
+}
+
+#Logo1 /* logo */
+{
+    transition: 0.7s ease;
+}
+
+#Logo1:hover /* action pour le logo */
+{
+    transform: scale(1.1);
+    margin: 0.3em 0.2em;
+}
+div #Logo1 /* animation changement de couleur */
+{
+    animation: AniLogo 3s linear infinite;
+}
+
+@keyframes AniLogo /* animation changement de couleur */
+{
+    0%
+    {
+        filter: hue-rotate(0deg);
+    }
+
+    100%
+    {
+        filter: hue-rotate(360deg);
+    }
+}
+/*-------------------------------------------------------*/
+/* Menu --------------------------------------------------*/
+
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    :root
+    {
+        --hauteur-menu: 2cqi;
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    :root
+    {
+        --hauteur-menu: 3cqi;
+    }
+}
+
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    nav
+    {
+        position: fixed;
+        top: 1.5cqi;
+        right: 0.4cqi;
+        font-size: 1.5cqi;
+        z-index: 2;
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    nav
+    {
+        position: fixed;
+        top: 1.5cqi;
+        right: 0.4cqi;
+        font-size: 2.5cqi;
+        z-index: 2;
+    }
+}
+
+nav > ul
+{
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    height: var(--hauteur-menu);
+}
+
+nav ul
+{
+    list-style-type: none;
+    border-radius: 20px / 20px;
+}
+
+nav > ul > li 
+{
+    position: relative;
+    height: 100%;
+    flex: 1;
+}
+
+nav > ul > li > a
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid transparent;
+    border-radius: 20px / 20px;
+}
+
+nav li a 
+{
+    text-decoration: none;
+    color: white;
+    border: 1px solid transparent;
+    font-family: 'Fredericka the Great', cursive;
+    
+}
+
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    .menu-deroulant > a:after /* propriétés du menu */
+    {
+        content: "|||";
+        font-weight: bold;
+        filter: drop-shadow(1.5px 1.5px 0px rgb(255, 255, 255));
+        border: 4px black solid;
+        transform: rotate(90deg);
+        font-size: 3cqi;
+        display: inline-block;
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    .menu-deroulant > a:after /* propriétés du menu */
+    {
+        content: "|||";
+        font-weight: bold;
+        filter: drop-shadow(1.5px 1.5px 0px rgb(255, 255, 255));
+        border: 4px black solid;
+        transform: rotate(90deg);
+        font-size: 4cqi;
+        display: inline-block;
+    }
+}
+
+
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    .sous-menu /* propriétés du sous-menu */
+    {
+        margin-top: 3.35cqi;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        max-height: 0;
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    .sous-menu /* propriétés du sous-menu */
+    {
+        margin-top: 4.35cqi;
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+        max-height: 0;
+    }
+}
+
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    .sous-menu > li > a /* propriétés du sous-menu */
+    {
+        height: 2.7cqi;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    .sous-menu > li > a /* propriétés du sous-menu */
+    {
+        height: 3.7cqi;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+    } 
+}
+
+nav > ul > li:hover > a /* propriétés du sous-menu */
+{ 
+    width: 100%;
+    animation: ApparitionMenu 1.5s forwards;
+    /* effet glass du menu */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+}
+
+@keyframes ApparitionMenu /* l'apparition du sous-menu */
+{
+    0% 
+    {
+        box-shadow: 0px 3px 3px 1px black;
+        border-top: 0.3em solid rgb(201, 75, 75);
+        border-left: 0.3em solid rgb(201, 75, 75);
+
+    }
+    30%
+    {
+        box-shadow: 0px 3px 3px 1px black;
+        border-top: 0.3em solid red;
+        border-left: 0.3em solid red;        
+    }
+    100%
+    {
+        box-shadow: 0px 3px 3px 1px black;
+        border-top: 0.3em solid darkred;
+        border-left: 0.3em solid darkred;
+    }
+}
+
+.sous-menu > li:hover /* propriétés du sous-menu */
+{
+    background-color: white;
+}
+
+.sous-menu > li:hover > a /* propriétés du sous-menu */
+{
+    color: black;
+}
+
+.menu-deroulant:hover > a:after /* balancer le menu */
+{
+    animation: MouvementMenu 0.4s linear forwards;
+}
+
+@keyframes MouvementMenu
+{
+    0%
+    {
+        transform: rotate(90deg) translateY(-10px);
+    }
+
+    20%
+    {
+        transform: rotate(90deg) translateY(10px);
+    }
+
+    40%
+    {
+        transform: rotate(90deg) translateY(-10px);
+
+    }
+
+    60%
+    {
+        transform: rotate(90deg) translateY(10px);
+    }
+
+    80%
+    {
+        transform: rotate(90deg) translateY(-10px);
+    }
+    
+    100%
+    {
+        transform: rotate(90deg) translateY(0px);
+    }
+}
+
+
+.menu-deroulant:hover > .sous-menu /* l'apparition du sous-menu */
+{
+    animation: ApparitionSousMenu 1.5s forwards;
+    /* effet glass du menu */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+}
+
+@keyframes ApparitionSousMenu /* l'apparition du sous-menu */
+{
+    0% 
+    {
+        box-shadow: 0px 3px 3px 1px black;
+        border-top: 0.3em solid rgb(201, 75, 75);
+        border-left: 0.3em solid rgb(201, 75, 75);
+
+    }
+    30%
+    {
+        box-shadow: 0px 3px 3px 1px black;
+        border-top: 0.3em solid red;
+        border-left: 0.3em solid red;        
+    }
+    100%
+    {
+        max-height: 50cqi;
+        box-shadow: 0px 3px 3px 1px black;
+        border-top: 0.3em solid darkred;
+        border-left: 0.3em solid darkred;
+    }
+}
+
+.sous-menu li .Active /* onglet actif du menu */ 
+{
+    background: white;
+    color: black;
+}
+/* --------------------------------------------------------*/
+/* HTML et CSS ---------------------------------*/
+.HTMLetCSS
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 2cqi;
+    padding-bottom: 2cqi;
+}
+
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    div #HTML
+    {
+        color: white;
+        font-size: 3.5cqi;
+        font-family: 'Fredericka the Great', cursive;
+        border: 3px solid transparent;
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    div #HTML
+    {
+        color: white;
+        font-size: 4.5cqi;
+        font-family: 'Fredericka the Great', cursive;
+        border: 3px solid transparent;
+    }
+}
+
+div #HTML:hover 
+{
+    animation: TitreHTML 7s linear;
+}
+
+@keyframes TitreHTML {
+    0% { 
+        color: rgb(101, 8, 8);
+    }
+    50% { 
+        color: rgb(54, 110, 129);
+    }
+    100% { 
+        color: rgb(189, 178, 158);
+    }
+  }
+
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    div #CSS
+    {
+        color: white;
+        font-size: 3.5cqi;
+        font-family: 'Fredericka the Great', cursive;
+        border: 3px solid transparent;
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    div #CSS
+    {
+        color: white;
+        font-size: 4.5cqi;
+        font-family: 'Fredericka the Great', cursive;
+        border: 3px solid transparent;
+    }
+}
+
+div #CSS:hover 
+{
+    animation: TitreHTML 7s linear;
+}
+
+@keyframes TitreHTML {
+    0% { 
+        color: rgb(101, 8, 8);
+    }
+    50% { 
+        color: rgb(54, 110, 129);
+    }
+    100% { 
+        color: rgb(189, 178, 158);
+    }
+  }
+
+/*--------------------------------------------------------*/
+/* Les boutons de l'acceuil-------------------------------------------*/
+section > aside > p > label
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    .CompteARebour /* Compte à rebour */
+    {
+        font-size: 1.3cqi;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    .CompteARebour /* Compte à rebour */
+    {
+        font-size: 2.5cqi;
+        position: absolute;
+        bottom: 10%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#Compte /* Compte à rebour */
+{
+    color: black;
+    border: 2px solid white;
+    background-color: white;
+    padding: 0.5cqi 1cqi;
+}
+
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    .Bouton2 div div 
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.3cqi;
+        color: white;
+
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    .Bouton2 div div 
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 2.3cqi;
+        color: white;
+
+    }
+}
+/*---------------------------------------------------------*/
+/* Bas de la page -----------------------------------------*/
+@media screen and (min-width: 750px) /* Styles pour les écrans de grande taille */
+{ 
+    footer /* bas de la page */
+    {
+        font-size: 1cqi;
+        color: white;
+        position: fixed;
+        bottom: 2em;
+        right: 1em;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 1100;
+    }
+}
+@media screen and (max-width: 749px) /* Styles pour les écrans de taille moyenne et petite*/
+{ 
+    footer /* bas de la page */
+    {
+        font-size: 2cqi;
+        color: white;
+        position: fixed;
+        bottom: 2em;
+        right: 1em;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 1100;
+    }
+}
+
+footer a 
+{
+    color: white;
+}
+
+.Mail /* mail */
+{
+    transition: 0.7s ease;
+}
+
+.Mail:hover /* action pour le mail */
+{
+    background-color: black;
+    color: rgb(138, 138, 210);
+}
+/*---------------------------------------------------------*/

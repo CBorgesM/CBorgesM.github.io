@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+    <head>
+
+        <!-- le format de ce site web en format de caractères europens  -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        
+        <!-- description du site web qu'on va voir sur la barre de recherche de google  -->
+        <meta name="description" content="Site Test 1">
+
+        <!-- les tags pour aider à trouver ce site web , la partie SEO -->
+        <meta name="Keywords" content="test, HTML, CSS, Wild, Code, School">
+        
+        <!-- c'est l'adresse du ce site web  -->
+        <meta name="url" content="">
+
+        <!-- les polices de ce site web -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Barriecito&family=Birthstone+Bounce&family=Black+And+White+Picture&family=Calligraffitti&family=Cinzel+Decorative&family=Comforter+Brush&family=Courgette&family=Dancing+Script&family=Dawning+of+a+New+Day&family=Devonshire&family=Eater&family=Ewert&family=Festive&family=Fredericka+the+Great&family=Frijole&family=Indie+Flower&family=Inspiration&family=Island+Moments&family=Jacques+Francois+Shadow&family=Kaushan+Script&family=Kranky&family=Lavishly+Yours&family=Libre+Barcode+128&family=Libre+Barcode+39+Text&family=Londrina+Shadow&family=Lovers+Quarrel&family=Miltonian&family=Molle&family=Monoton&family=Mr+Bedfort&family=Nabla&family=Niconne&family=Norican&family=Over+the+Rainbow&family=Parisienne&family=Press+Start+2P&family=Princess+Sofia&family=Rubik+Burned&family=Rubik+Marker+Hatch&family=Sacramento&family=Shadows+Into+Light&family=Splash&family=Vast+Shadow&display=swap" rel="stylesheet"> 
+
+        <!-- lien avec la feuille de style de ce site web  -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- logo de ce site web sur la barre d'utilisation -->
+        <link rel="icon" href="tDWS.png">
+        
+        <title>
+            Test 1
+        </title>
+
+    </head>
+
+    <body class="FondDesPages">
+
+        <header>
+
+            <div>
+                <a href="" class="Logo">
+                    <image 
+                    src="tDWS.png"
+                    alt="Planète" 
+                    id="Logo1"
+                    />
+                </a>
+            </div>
+
+        </header>
+
+        <nav>   
+            <ul>
+                <li class="menu-deroulant">
+                    <a href=""></a>
+                    <ul  class="sous-menu">
+                        <li>
+                            <a href="">Page 1 du site</a>
+                        </li>
+                        <li>
+                            <a href="">Page 2 du site</a>
+                        </li>
+                        <li>
+                            <a href="">Page 3 du site</a>
+                        </li>
+                        <li>
+                            <a href="">Page 4 du site</a>
+                        </li>
+                        <li>
+                            <a href="">Page 5 du site</a>
+                        </li>
+                        <li>
+                            <a href="">Page 6 du site</a>
+                        </li>
+                        <li>
+                            <a href="">Page 7 du site</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <section>
+
+            <aside class="Titre">
+                <div class="HTMLetCSS">
+                    <h1 id="HTML">HTML</h1>  
+                    <h1 id="CSS">& CSS</h1>  
+                    <br><br><br><br>
+                    <p id="reste"> Et voilà le texte de la page</p> 
+                    <br><br><br><br>
+                    <h2 id="reste"> On peut créer jusqu'à six niveaux de titres en HTML </h2>
+                    <br><br><br><br>
+                    <p id="reste"> Et voici un autre paragraphe </p>   
+                    <br><br><br><br>
+                    <a href= "http://www.wildcodeschool.com" class="Mail" id="reste"> <img src= "https://res.cloudinary.com/wildcodeschool/image/upload/c_fill,h_50/v1/static/irjoy97aq0eol8bf6959"></a>
+                    <br><br>
+                    
+
+                </div>                       
+            </aside>
+
+            <aside class="Bouton">
+
+                <p class="CompteARebour">
+
+                    <label id="Compte"></label>
+                    <script type="text/javascript">
+                        var Affiche=document.getElementById("Compte");
+                        function Rebour() {
+                        var date1 = new Date();
+                        var date2 = new Date ("Oct 06, 2023 12:30:00");
+                        var sec = (date2 - date1) / 1000;
+                        var n = 24 * 3600;
+                        if (sec > 0) {
+                        j = Math.floor (sec / n);
+                        h = Math.floor ((sec - (j * n)) / 3600);
+                        mn = Math.floor ((sec - ((j * n + h * 3600))) / 60);
+                        sec = Math.floor (sec - ((j * n + h * 3600 + mn * 60)));
+                        Affiche.innerHTML = "Nous sommes à " + j +" j "+ h +" h "+ mn +" min "+ sec + " s de la fin de la formation en Data Analyst";
+                        window.status = "Temps restant : " + j +" j "+ h +" h "+ mn +" min "+ sec + " s ";
+                        }
+                        tRebour=setTimeout ("Rebour();", 1000);
+                        }
+                        Rebour();
+                    </script>
+
+                </p>
+
+            </aside>
+
+        </section>
+
+    </body> 
+
+    <footer>
+
+        <p>
+            2023 &copy; <a href="mailto:cassius.borges@hotmail.fr" class="Mail">Cassius</a> &trade; 
+            <br> - Tous droits réservés -
+        </p>
+
+    </footer>
+
+</html>
